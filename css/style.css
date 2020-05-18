@@ -488,10 +488,15 @@ Side slide
     transition: 0.3s;
 
 }
-.canva-box{
-    margin-top: 12%;
 
+.canva-box {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
+
+
 
 .sidenav a:hover {
     color: #0063DD;
@@ -796,8 +801,11 @@ Service Box
     border-radius: 5px;
     box-shadow: 0 1px 6px 0 rgba(32,33,36,0.28);
 }
+.service-card:hover .s-head{
+    color:#333 !important;
+}
 
-.service-card:hover p, .s-head{
+.service-card:hover p{
     color:#333 !important;
 }
 .service-card:hover i{
@@ -816,6 +824,7 @@ Service Box
 }
 .service-card i {
     font-size: 40px;
+    color: #04356b !important;
 }
 .service-card:hover .icon-zoom{
     padding: 0px 0px 0px 20px !important;
@@ -835,6 +844,7 @@ Service Box
 .s-head{
     font-weight: 700;
     font-family: Poppins , sans-serif;
+    color: #fff !important;
 }
 
 @media (max-width: 991.98px) {
@@ -1327,6 +1337,7 @@ Contact Section
     padding: 10px 90px !important;
     border-radius: 0px !important;
     color: #0063dd;
+    font-size: 18px !important;
 }
 
 .footer{
