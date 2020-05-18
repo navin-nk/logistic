@@ -77,6 +77,7 @@ $('.owl-carousel1').owlCarousel({
     items: 4,
     dots:true,
     autoplay: true,
+    
     autoplayTimeout: 2500,
     smartSpeed: 450,
     responsive: {
