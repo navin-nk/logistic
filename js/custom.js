@@ -71,12 +71,12 @@ function myFunction(x) {
 
 //blog slide
 $('.owl-carousel1').owlCarousel({
-    loop:false,
+    loop:true,
     margin: 0,
     center: false,
     items: 4,
     dots:true,
-    autoplay: false,
+    autoplay: true,
     autoplayTimeout: 2500,
     smartSpeed: 450,
     responsive: {
