@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Logistics | Home</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -24,15 +25,18 @@
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
     <div class="canva-box">
 
-
-        <a href="#home" onclick="closeNav()">Home</a>
-        <a href="#about" onclick="closeNav()">About</a>
-        <a href="#services" onclick="closeNav()">Services</a>
-        <a href="#client" onclick="closeNav()">Clients</a>
-        <a href="#contact" onclick="closeNav()">Contact</a>
+        <div class="menu-content">
+            <ul class="canva-menu">
+                <li><a href="#home" onclick="closeNav()">Home</a></li>
+                <li><a href="#about" onclick="closeNav()">About</a></li>
+                <li><a href="#services" onclick="closeNav()">Services</a></li>
+                <li><a href="#pricing" onclick="closeNav()">Pricing</a></li>
+                <li><a href="#contact" onclick="closeNav()">Contact</a></li>
+            </ul>
+        </div>
         <div class="social-link mt-30">
             <ul>
-                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                <li class="active1"><a href="#"><i class="fa fa-facebook"></i></a></li>
                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                 <li><a href="#"><i class="fa fa-instagram"></i></a></li>
@@ -42,6 +46,8 @@
     </div>
 </div>
 <div id="main">
+    <a id="button"></a>
+
     <header class="header">
         <div class="topbar-area style-01">
             <div class="container">
@@ -74,8 +80,8 @@
             </div>
         </div>
         <nav class="navbar navbar-expand-lg fixed-top py-3">
-            <div class="container"><a href="#" class="navbar-brand text-uppercase font-weight-bold"><img
-                    src="./images/logo.png" class="logo" alt="fulgid"></a>
+            <div class="container"><a href="index.html" class="navbar-brand text-uppercase font-weight-bold">
+                <img src="./images/logo.png" class="logo" alt="fulgid"></a>
                 <span style="font-size:25px;cursor:pointer" onclick="openNav()"
                       class="side-btn d-none d-sm-block d-md-none">&#9776;</span>
                 <button type="button" data-toggle="collapse" data-target="#menu-content" aria-expanded="false"
@@ -85,18 +91,18 @@
                     <span class="bar2"></span>
                     <span class="bar3"></span>
                 </button>
-                <div id="menu-content" class="collapse navbar-collapse">
+                <div id="menu-content" class="collapse navbar-collapse menu-content">
                     <a href="toTop"></a>
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="#home" class="nav-link text-uppercase">Home <span
-                                class="sr-only">(current)</span></a></li>
+                        <li class="nav-item "><a href="#home" class="nav-link text-uppercase active1">Home</a></li>
                         <li class="nav-item"><a href="#about" class="nav-link text-uppercase">About Us</a></li>
                         <li class="nav-item"><a href="#services" class="nav-link text-uppercase">Services</a></li>
                         <li class="nav-item"><a href="#pricing" class="nav-link text-uppercase ">Pricing</a></li>
                         <li class="nav-item"><a href="#blog" class="nav-link text-uppercase">Blog</a></li>
                         <li class="nav-item"><a href="#contact" class="nav-link text-uppercase">Contact Us</a></li>
                     </ul>
-                    <span style="font-size:25px;cursor:pointer" onclick="openNav()" class="side-btn d-none d-sm-block">&#9776;</span>
+                    <span style="font-size:25px;cursor:pointer" onclick="openNav()"
+                          class="side-btn d-none d-xs-none d-sm-block">&#9776;</span>
                 </div>
             </div>
         </nav>
@@ -105,7 +111,8 @@
     <header id="home">
         <div class="container">
             <!-- <div class=" "> -->
-            <div class="centerAlign" data-aos="fade-up">
+            <div class="centerAlign section-title" data-aos="fade-up">
+                <h1 class="text-border">Logistic</h1>
                 <h5 class="text-light ut1">Logistics Cargo</h5>
                 <h1 class="font-weight-bold heading1">Local <span class="darkBlue">Logistics </span><br/>Service
                     Provider</h1>
@@ -122,32 +129,90 @@
             </div>
         </div>
     </header>
-
     <section class="hero-cards mb-100">
         <div class="container">
             <div class="justify-content-center text-center">
                 <div class="col-lg-12 row bg-theme service-box" data-aos="zoom-in">
                     <div class=" col-lg-4 col-md-4 col-sm-12 col-12 col-27 m-15 service-card p-4 mt-4">
                         <div class="borderd">
-                            <span><i class=" fa-icon fa fa-ship" aria-hidden="true"></i></span>
+                            <span>
+                                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                     xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                     width="60px" height="60px" viewBox="0 0 512 512"
+                                     style="enable-background:new 0 0 512 512;" xml:space="preserve"
+                                     class="service-icon v1">
+<style type="text/css">
+
+</style>
+<path id="Shape" class="st0" d="M52.1,489.6l-41.3-11.4c-2.9-0.8-6.1,0-8.3,2.1s-3,5.3-2.3,8.2c0.8,3,3,5.3,6,6.1L47.6,506
+	c28.5,8,58.6,8,87,0c25.5-7.1,52.4-7.1,77.9,0c28.5,8,58.6,8,87,0c25.5-7.2,52.4-7.2,77.9,0c28.5,8,58.6,8,87,0l41.2-11.4
+	c2.9-0.8,5.2-3.1,6-6.1c0.8-3-0.1-6.1-2.3-8.2s-5.3-3-8.3-2.1l-41.3,11.4c-25.5,7.2-52.4,7.2-77.9,0c-8.6-2.4-17.3-4-26.2-4.9
+	l100.7-153.5c4.5-6.8,5.5-15.3,2.6-22.9c-2.8-7.6-9.1-13.4-16.9-15.6l-24.1-7V170.7c0-14.1-11.5-25.6-25.6-25.6H384V68.3
+	c0-14.1-11.5-25.6-25.6-25.6h-59.7V17.1C298.7,7.6,291,0,281.6,0h-51.2c-9.4,0-17.1,7.6-17.1,17.1v25.6h-59.7
+	c-14.1,0-25.6,11.5-25.6,25.6v76.8h-8.5c-14.1,0-25.6,11.5-25.6,25.6v114.9l-24.1,7c-7.8,2.2-14.1,8-17,15.6
+	c-2.8,7.6-1.9,16.1,2.6,22.9l100.7,153.5c-8.8,1-17.6,2.6-26.2,5C104.5,496.7,77.6,496.7,52.1,489.6L52.1,489.6z M295,489.6
+	c-9.9,2.8-20.2,4.5-30.5,5.1v-33.9c0-4.7-3.8-8.5-8.5-8.5c-4.7,0-8.5,3.8-8.5,8.5v33.9c-10.3-0.6-20.5-2.4-30.4-5.1
+	c-13.4-3.7-27.2-5.7-41.1-5.9l-25.2-38.4l96.7-32.3v13.7c0,4.7,3.8,8.5,8.5,8.5c4.7,0,8.5-3.8,8.5-8.5v-13.7l96.7,32.4l-25.2,38.4
+	C322.2,483.9,308.4,485.9,295,489.6L295,489.6z M264.5,370.3l119,41l-12.7,19.3l-106.4-35.7L264.5,370.3z M247.5,394.9l-106.4,35.6
+	l-12.7-19.3l119-41V394.9z M443.2,314.2c1,2.5,0.6,5.4-0.9,7.6l-49.1,74.8l-128.7-44.3v-93.5l173,50.2
+	C440.2,309.7,442.3,311.6,443.2,314.2L443.2,314.2z M230.4,17.1h51.2v25.6h-51.2V17.1z M145.1,68.3c0-4.7,3.8-8.5,8.5-8.5h204.8
+	c4.7,0,8.5,3.8,8.5,8.5v76.8H145.1V68.3z M110.9,170.7c0-4.7,3.8-8.5,8.5-8.5h273.1c4.7,0,8.5,3.8,8.5,8.5v110l-142.7-41.4
+	c-1.5-0.5-3.2-0.5-4.7,0l-142.7,41.4V170.7z M68.8,314.2c0.9-2.5,3.1-4.5,5.7-5.2l173-50.2v93.5l-128.7,44.3l-49.1-74.8
+	C68.2,319.6,67.9,316.7,68.8,314.2L68.8,314.2z"/>
+    <path class="st0" d="M290.1,230.4c14.1,0,25.6-11.5,25.6-25.6c0-14.1-11.5-25.6-25.6-25.6c-14.1,0-25.6,11.5-25.6,25.6
+		C264.5,218.9,276,230.4,290.1,230.4z M290.1,196.3c4.7,0,8.5,3.8,8.5,8.5c0,4.7-3.8,8.5-8.5,8.5c-4.7,0-8.5-3.8-8.5-8.5
+		C281.6,200.1,285.4,196.3,290.1,196.3z"/>
+    <path class="st0" d="M221.9,179.2c-14.1,0-25.6,11.5-25.6,25.6c0,14.1,11.5,25.6,25.6,25.6c14.1,0,25.6-11.5,25.6-25.6
+		C247.5,190.7,236,179.2,221.9,179.2z M221.9,213.3c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5c4.7,0,8.5,3.8,8.5,8.5
+		C230.4,209.5,226.6,213.3,221.9,213.3z"/>
+    <path class="st0" d="M153.6,179.2c-14.1,0-25.6,11.5-25.6,25.6c0,14.1,11.5,25.6,25.6,25.6s25.6-11.5,25.6-25.6
+		C179.2,190.7,167.7,179.2,153.6,179.2z M153.6,213.3c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5s8.5,3.8,8.5,8.5
+		C162.1,209.5,158.3,213.3,153.6,213.3z"/>
+    <path class="st0" d="M324.3,76.8c-14.1,0-25.6,11.5-25.6,25.6s11.5,25.6,25.6,25.6c14.1,0,25.6-11.5,25.6-25.6
+		S338.4,76.8,324.3,76.8z M324.3,110.9c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5s8.5,3.8,8.5,8.5
+		C332.8,107.1,329,110.9,324.3,110.9z"/>
+    <path class="st0" d="M256,76.8c-14.1,0-25.6,11.5-25.6,25.6S241.9,128,256,128c14.1,0,25.6-11.5,25.6-25.6S270.1,76.8,256,76.8z
+		 M256,110.9c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5c4.7,0,8.5,3.8,8.5,8.5C264.5,107.1,260.7,110.9,256,110.9z"/>
+    <path class="st0" d="M187.7,76.8c-10.4,0-19.7,6.2-23.7,15.8c-4,9.6-1.8,20.6,5.5,27.9s18.3,9.5,27.9,5.5
+		c9.6-4,15.8-13.3,15.8-23.7C213.3,88.3,201.9,76.8,187.7,76.8z M187.7,110.9c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5
+		c4.7,0,8.5,3.8,8.5,8.5C196.3,107.1,192.4,110.9,187.7,110.9z"/>
+    <path class="st0" d="M358.4,230.4c14.1,0,25.6-11.5,25.6-25.6c0-14.1-11.5-25.6-25.6-25.6c-14.1,0-25.6,11.5-25.6,25.6
+		C332.8,218.9,344.3,230.4,358.4,230.4z M358.4,196.3c4.7,0,8.5,3.8,8.5,8.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5
+		C349.9,200.1,353.7,196.3,358.4,196.3z"/>
+<g>
+
+</g>
+</svg></span>
                             <h3 class="text-white my-3 font-25 s-head pt-20">Sea Transport</h3>
                             <p class="text-light font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
                                 gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
                                 lorem quis bibendum auctor.Aenean sollicitudin</p>
-                            <div class="icon-zoom"> <button class="btn1 btn-arrow btn-border1 mt-20 mb-10">
+                            <div class="icon-zoom">
+                                <button class="btn1 btn-arrow btn-border1 mt-20 mb-10">
                                         <span>Learn More<svg version="1.1" id="Layer_1"
                                                              xmlns="http://www.w3.org/2000/svg"
                                                              xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                              viewBox="0 0 36.1 25.8"
                                                              enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
                                                 fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
-                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button></div>
+                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg>
+                                        </span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class=" col-lg-4 col-md-4 col-sm-12 col-12 col-27 m-15 service-card p-4 mt-4">
                         <div class="borderd">
-                            <span><i class=" fa-icon fa fa-bus" aria-hidden="true"></i></span>
+                            <span>
+                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                     version="1.1" id="Capa_1" x="0px"
+                                     y="0px" viewBox="0 0 491.1 491.1" style="enable-background:new 0 0 491.1 491.1;"
+                                     xml:space="preserve" width="60px"
+                                     height="60px" class="service-icon v1"><g>
+    <path transform="translate(0 -540.36)"
+          d="M401.5,863.31c-12,0-23.4,4.7-32,13.2c-8.6,8.6-13.4,19.8-13.4,31.8s4.7,23.2,13.4,31.8  c8.7,8.5,20,13.2,32,13.2c24.6,0,44.6-20.2,44.6-45S426.1,863.31,401.5,863.31z M401.5,933.31c-13.8,0-25.4-11.4-25.4-25  s11.6-25,25.4-25c13.6,0,24.6,11.2,24.6,25S415.1,933.31,401.5,933.31z M413.1,713.41c-1.8-1.7-4.2-2.6-6.7-2.6h-51.3  c-5.5,0-10,4.5-10,10v82c0,5.5,4.5,10,10,10h81.4c5.5,0,10-4.5,10-10v-54.9c0-2.8-1.2-5.5-3.3-7.4L413.1,713.41z M426.5,792.81  h-61.4v-62.1h37.4l24,21.6V792.81z M157.3,863.31c-12,0-23.4,4.7-32,13.2c-8.6,8.6-13.4,19.8-13.4,31.8s4.7,23.2,13.4,31.8  c8.7,8.5,20,13.2,32,13.2c24.6,0,44.6-20.2,44.6-45S181.9,863.31,157.3,863.31z M157.3,933.31c-13.8,0-25.4-11.4-25.4-25  s11.6-25,25.4-25c13.6,0,24.6,11.2,24.6,25S170.9,933.31,157.3,933.31z M90.6,875.61H70.5v-26.6c0-5.5-4.5-10-10-10s-10,4.5-10,10  v36.6c0,5.5,4.5,10,10,10h30.1c5.5,0,10-4.5,10-10S96.1,875.61,90.6,875.61z M141.3,821.11c0-5.5-4.5-10-10-10H10  c-5.5,0-10,4.5-10,10s4.5,10,10,10h121.3C136.8,831.11,141.3,826.71,141.3,821.11z M30.3,785.01l121.3,0.7c5.5,0,10-4.4,10.1-9.9  c0.1-5.6-4.4-10.1-9.9-10.1l-121.3-0.7c-0.1,0-0.1,0-0.1,0c-5.5,0-10,4.4-10,9.9C20.3,780.51,24.8,785.01,30.3,785.01z M50.7,739.61  H172c5.5,0,10-4.5,10-10s-4.5-10-10-10H50.7c-5.5,0-10,4.5-10,10S45.2,739.61,50.7,739.61z M487.4,726.11L487.4,726.11l-71.6-59.3  c-1.8-1.5-4-2.3-6.4-2.3h-84.2v-36c0-5.5-4.5-10-10-10H60.5c-5.5,0-10,4.5-10,10v73.2c0,5.5,4.5,10,10,10s10-4.5,10-10v-63.2h234.8  v237.1h-82c-5.5,0-10,4.5-10,10s4.5,10,10,10h122.1c5.5,0,10-4.5,10-10s-4.5-10-10-10h-20.1v-191.1h80.6l65.2,54l-0.7,136.9H460  c-5.5,0-10,4.5-10,10s4.5,10,10,10h20.3c5.5,0,10-4.4,10-9.9l0.8-151.6C491,730.91,489.7,728.01,487.4,726.11z"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/></g> </svg>
+</span>
                             <h3 class="text-white my-3 font-25 s-head pt-20">Road Transport</h3>
                             <p class="text-light font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
                                 gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
@@ -166,7 +231,12 @@
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-4 col-sm-12 col-12 col-27 m-15 service-card p-4 mt-4">
-                        <span><i class=" fa-icon fa fa-fighter-jet" aria-hidden="true"></i></span>
+                        <span><svg xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -101 713.75189 713"
+                                   width="60px" class="service-icon v1">
+
+    <path d="m85.085938 304.40625c-6.144532 2.882812-8.855469 10.140625-6.117188 16.34375l28.066406 60.25c1.378906 3 3.894532 5.335938 6.988282 6.488281 1.355468.492188 2.792968.746094 4.238281.746094 1.808593.015625 3.59375-.371094 5.238281-1.117187l212.054688-99.046876-19.207032 200.824219c-.371094 3.953125 1.152344 7.839844 4.109375 10.480469 9.296875 7.695312 20.882813 12.078125 32.9375 12.472656 3.324219-.003906 6.628907-.421875 9.851563-1.242187 17.214844-4.492188 30.5625-19.832031 39.667968-46.03125l83.449219-247.101563 165.273438-77.09375c48.648437-22.699218 73.71875-68.726562 56.882812-104.652344-9.554687-18.777343-27.855469-31.550781-48.773437-34.054687-23.242188-3.507813-46.996094.148437-68.105469 10.484375l-190.726563 89.433594-205.0625-80.207032c-25.824218-9.726562-46.277343-9.476562-60.621093.878907-12.035157 9.875-18.882813 24.71875-18.589844 40.285156.125 3.949219 2.113281 7.601563 5.363281 9.859375l138.082032 94.921875-79.078126 37.421875-132.601562-33.683594c-5.433594-1.335937-11.089844 1.113282-13.84375 5.988282l-33.050781 59.496093c-1.714844 3.152344-1.984375 6.894531-.738281 10.261719 1.238281 3.371094 3.871093 6.039062 7.226562 7.328125l98.167969 40.542969zm57.121093-248.09375c.734375-5.273438 3.402344-10.074219 7.488281-13.472656 7.113282-5.117188 20.085938-4.367188 37.421876 2.117187l182.617187 71.226563-83.328125 38.917968zm-112.257812 180.117188 21.703125-38.542969 127.605468 31.679687c2.75.695313 5.652344.433594 8.238282-.742187l414.75-193.71875c16.488281-8.132813 35.058594-11.09375 53.261718-8.484375 12.765626 1.175781 24.136719 8.542968 30.4375 19.707031 10.46875 22.457031-10.109374 55.261719-44.914062 71.476563l-143.695312 67.363281 8.734374-25.828125c2.207032-6.644532-1.398437-13.824219-8.042968-16.027344-6.652344-2.203125-13.828125 1.402344-16.03125 8.046875l-102.660156 305.476563c-6.113282 17.34375-13.722657 27.699218-22.203126 29.9375-5.253906 1.011718-10.691406-.019532-15.21875-2.863282l24.949219-261.953125c.652344-6.886719-4.398437-13-11.292969-13.652343-6.886718-.660157-13 4.398437-13.65625 11.285156l-3.863281 40.039062-214.054687 99.789063-17.578125-37.421875 35.167969-16.460938c4.527343-1.996094 7.445312-6.472656 7.445312-11.414062 0-4.945313-2.917969-9.421875-7.445312-11.414063zm0 0"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+</svg></span>
                         <h3 class="text-white my-3 font-25 s-head pt-20">Air Transport</h3>
                         <p class="text-light font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin gravida
                             nibh vel velit auctor aliquet. Aenean sollicitudin,
@@ -187,21 +257,21 @@
             </div>
         </div>
     </section>
-
     <section class="about-section mb-100 pt-100 " id="about">
         <div class="container">
-            <div class="mt-30 mb-20" data-aos="fade-up">
-                <p class="text-grey sub-head">ABOUT US</p>
+            <div class="mt-30 mb-20 section-title" data-aos="fade-up">
+                <h1 class="text-boreder">01</h1>
+                <span class="line"><p class="text-grey sub-head">ABOUT US</p></span>
                 <h2 class="text-theme sud-head">Freight Company With Logistics <br/>Difference. <span class="font-dark">Innovation</span>
                 </h2>
             </div>
-            <div class="row col-lg-12 mt-50">
-                <div class="col-lg-6" >
+            <div class="row col-md-12 mt-50">
+                <div class="col-md-6">
                     <div class="abt-box mt-10" data-aos="fade-down"><img src="./images/about.jpg" alt="about Img"/>
                         <div class="canva-bg"></div>
                     </div>
                 </div>
-                <div class="col-lg-6 brief" data-aos="fade-left">
+                <div class="col-md-6 brief text-center" data-aos="fade-left">
                     <div class="mt-20">
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla accumsan, metus ultrices
                             eleifend gravi, Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -215,10 +285,381 @@
             </div>
         </div>
     </section>
+    <section class="service-section bg-light-grey pt-100 pb-50" id="services">
+        <div class="container">
+            <div class="mt-30 mb-20 pb-30 section-title" data-aos="fade-up">
+                <h1 class="text-boreder">03</h1>
+                <p class="text-grey sub-head">OUR SERVICES</p>
+                <h2 class="text-theme sud-head">We Provide Products <br/><span
+                        class="font-dark">All over </span>The World.</h2>
+            </div>
 
+            <div class="col-md-12 row" data-aos="zoom-in">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <span>
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+     y="0px"
+     width="60px" height="60px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"
+     class="service-icon">
+<style type="text/css">
+
+</style>
+<path id="Shape" class="st0" d="M52.1,489.6l-41.3-11.4c-2.9-0.8-6.1,0-8.3,2.1s-3,5.3-2.3,8.2c0.8,3,3,5.3,6,6.1L47.6,506
+	c28.5,8,58.6,8,87,0c25.5-7.1,52.4-7.1,77.9,0c28.5,8,58.6,8,87,0c25.5-7.2,52.4-7.2,77.9,0c28.5,8,58.6,8,87,0l41.2-11.4
+	c2.9-0.8,5.2-3.1,6-6.1c0.8-3-0.1-6.1-2.3-8.2s-5.3-3-8.3-2.1l-41.3,11.4c-25.5,7.2-52.4,7.2-77.9,0c-8.6-2.4-17.3-4-26.2-4.9
+	l100.7-153.5c4.5-6.8,5.5-15.3,2.6-22.9c-2.8-7.6-9.1-13.4-16.9-15.6l-24.1-7V170.7c0-14.1-11.5-25.6-25.6-25.6H384V68.3
+	c0-14.1-11.5-25.6-25.6-25.6h-59.7V17.1C298.7,7.6,291,0,281.6,0h-51.2c-9.4,0-17.1,7.6-17.1,17.1v25.6h-59.7
+	c-14.1,0-25.6,11.5-25.6,25.6v76.8h-8.5c-14.1,0-25.6,11.5-25.6,25.6v114.9l-24.1,7c-7.8,2.2-14.1,8-17,15.6
+	c-2.8,7.6-1.9,16.1,2.6,22.9l100.7,153.5c-8.8,1-17.6,2.6-26.2,5C104.5,496.7,77.6,496.7,52.1,489.6L52.1,489.6z M295,489.6
+	c-9.9,2.8-20.2,4.5-30.5,5.1v-33.9c0-4.7-3.8-8.5-8.5-8.5c-4.7,0-8.5,3.8-8.5,8.5v33.9c-10.3-0.6-20.5-2.4-30.4-5.1
+	c-13.4-3.7-27.2-5.7-41.1-5.9l-25.2-38.4l96.7-32.3v13.7c0,4.7,3.8,8.5,8.5,8.5c4.7,0,8.5-3.8,8.5-8.5v-13.7l96.7,32.4l-25.2,38.4
+	C322.2,483.9,308.4,485.9,295,489.6L295,489.6z M264.5,370.3l119,41l-12.7,19.3l-106.4-35.7L264.5,370.3z M247.5,394.9l-106.4,35.6
+	l-12.7-19.3l119-41V394.9z M443.2,314.2c1,2.5,0.6,5.4-0.9,7.6l-49.1,74.8l-128.7-44.3v-93.5l173,50.2
+	C440.2,309.7,442.3,311.6,443.2,314.2L443.2,314.2z M230.4,17.1h51.2v25.6h-51.2V17.1z M145.1,68.3c0-4.7,3.8-8.5,8.5-8.5h204.8
+	c4.7,0,8.5,3.8,8.5,8.5v76.8H145.1V68.3z M110.9,170.7c0-4.7,3.8-8.5,8.5-8.5h273.1c4.7,0,8.5,3.8,8.5,8.5v110l-142.7-41.4
+	c-1.5-0.5-3.2-0.5-4.7,0l-142.7,41.4V170.7z M68.8,314.2c0.9-2.5,3.1-4.5,5.7-5.2l173-50.2v93.5l-128.7,44.3l-49.1-74.8
+	C68.2,319.6,67.9,316.7,68.8,314.2L68.8,314.2z"/>
+    <path class="st0" d="M290.1,230.4c14.1,0,25.6-11.5,25.6-25.6c0-14.1-11.5-25.6-25.6-25.6c-14.1,0-25.6,11.5-25.6,25.6
+		C264.5,218.9,276,230.4,290.1,230.4z M290.1,196.3c4.7,0,8.5,3.8,8.5,8.5c0,4.7-3.8,8.5-8.5,8.5c-4.7,0-8.5-3.8-8.5-8.5
+		C281.6,200.1,285.4,196.3,290.1,196.3z"/>
+    <path class="st0" d="M221.9,179.2c-14.1,0-25.6,11.5-25.6,25.6c0,14.1,11.5,25.6,25.6,25.6c14.1,0,25.6-11.5,25.6-25.6
+		C247.5,190.7,236,179.2,221.9,179.2z M221.9,213.3c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5c4.7,0,8.5,3.8,8.5,8.5
+		C230.4,209.5,226.6,213.3,221.9,213.3z"/>
+    <path class="st0" d="M153.6,179.2c-14.1,0-25.6,11.5-25.6,25.6c0,14.1,11.5,25.6,25.6,25.6s25.6-11.5,25.6-25.6
+		C179.2,190.7,167.7,179.2,153.6,179.2z M153.6,213.3c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5s8.5,3.8,8.5,8.5
+		C162.1,209.5,158.3,213.3,153.6,213.3z"/>
+    <path class="st0" d="M324.3,76.8c-14.1,0-25.6,11.5-25.6,25.6s11.5,25.6,25.6,25.6c14.1,0,25.6-11.5,25.6-25.6
+		S338.4,76.8,324.3,76.8z M324.3,110.9c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5s8.5,3.8,8.5,8.5
+		C332.8,107.1,329,110.9,324.3,110.9z"/>
+    <path class="st0" d="M256,76.8c-14.1,0-25.6,11.5-25.6,25.6S241.9,128,256,128c14.1,0,25.6-11.5,25.6-25.6S270.1,76.8,256,76.8z
+		 M256,110.9c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5c4.7,0,8.5,3.8,8.5,8.5C264.5,107.1,260.7,110.9,256,110.9z"/>
+    <path class="st0" d="M187.7,76.8c-10.4,0-19.7,6.2-23.7,15.8c-4,9.6-1.8,20.6,5.5,27.9s18.3,9.5,27.9,5.5
+		c9.6-4,15.8-13.3,15.8-23.7C213.3,88.3,201.9,76.8,187.7,76.8z M187.7,110.9c-4.7,0-8.5-3.8-8.5-8.5c0-4.7,3.8-8.5,8.5-8.5
+		c4.7,0,8.5,3.8,8.5,8.5C196.3,107.1,192.4,110.9,187.7,110.9z"/>
+    <path class="st0" d="M358.4,230.4c14.1,0,25.6-11.5,25.6-25.6c0-14.1-11.5-25.6-25.6-25.6c-14.1,0-25.6,11.5-25.6,25.6
+		C332.8,218.9,344.3,230.4,358.4,230.4z M358.4,196.3c4.7,0,8.5,3.8,8.5,8.5c0,4.7-3.8,8.5-8.5,8.5s-8.5-3.8-8.5-8.5
+		C349.9,200.1,353.7,196.3,358.4,196.3z"/>
+<g>
+
+</g>
+</svg>
+
+                            </span>
+                        <h3 class="text-black my-3 font-25 s-head pt-20">Sea Transport</h3>
+                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
+                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                            lorem quis bibendum auctor.Aenean sollicitudin</p>
+                        <div class="icon-zoom">
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
+                                        <span>Learn More<svg version="1.1" id="Layer_1"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 36.1 25.8"
+                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="service-card">
+                        <span>
+                            <?xml version="1.0"?>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 version="1.1" id="Capa_1" x="0px"
+                                 y="0px" viewBox="0 0 491.1 491.1" style="enable-background:new 0 0 491.1 491.1;"
+                                 xml:space="preserve" width="60px"
+                                 height="60px"><g>
+    <path transform="translate(0 -540.36)"
+          d="M401.5,863.31c-12,0-23.4,4.7-32,13.2c-8.6,8.6-13.4,19.8-13.4,31.8s4.7,23.2,13.4,31.8  c8.7,8.5,20,13.2,32,13.2c24.6,0,44.6-20.2,44.6-45S426.1,863.31,401.5,863.31z M401.5,933.31c-13.8,0-25.4-11.4-25.4-25  s11.6-25,25.4-25c13.6,0,24.6,11.2,24.6,25S415.1,933.31,401.5,933.31z M413.1,713.41c-1.8-1.7-4.2-2.6-6.7-2.6h-51.3  c-5.5,0-10,4.5-10,10v82c0,5.5,4.5,10,10,10h81.4c5.5,0,10-4.5,10-10v-54.9c0-2.8-1.2-5.5-3.3-7.4L413.1,713.41z M426.5,792.81  h-61.4v-62.1h37.4l24,21.6V792.81z M157.3,863.31c-12,0-23.4,4.7-32,13.2c-8.6,8.6-13.4,19.8-13.4,31.8s4.7,23.2,13.4,31.8  c8.7,8.5,20,13.2,32,13.2c24.6,0,44.6-20.2,44.6-45S181.9,863.31,157.3,863.31z M157.3,933.31c-13.8,0-25.4-11.4-25.4-25  s11.6-25,25.4-25c13.6,0,24.6,11.2,24.6,25S170.9,933.31,157.3,933.31z M90.6,875.61H70.5v-26.6c0-5.5-4.5-10-10-10s-10,4.5-10,10  v36.6c0,5.5,4.5,10,10,10h30.1c5.5,0,10-4.5,10-10S96.1,875.61,90.6,875.61z M141.3,821.11c0-5.5-4.5-10-10-10H10  c-5.5,0-10,4.5-10,10s4.5,10,10,10h121.3C136.8,831.11,141.3,826.71,141.3,821.11z M30.3,785.01l121.3,0.7c5.5,0,10-4.4,10.1-9.9  c0.1-5.6-4.4-10.1-9.9-10.1l-121.3-0.7c-0.1,0-0.1,0-0.1,0c-5.5,0-10,4.4-10,9.9C20.3,780.51,24.8,785.01,30.3,785.01z M50.7,739.61  H172c5.5,0,10-4.5,10-10s-4.5-10-10-10H50.7c-5.5,0-10,4.5-10,10S45.2,739.61,50.7,739.61z M487.4,726.11L487.4,726.11l-71.6-59.3  c-1.8-1.5-4-2.3-6.4-2.3h-84.2v-36c0-5.5-4.5-10-10-10H60.5c-5.5,0-10,4.5-10,10v73.2c0,5.5,4.5,10,10,10s10-4.5,10-10v-63.2h234.8  v237.1h-82c-5.5,0-10,4.5-10,10s4.5,10,10,10h122.1c5.5,0,10-4.5,10-10s-4.5-10-10-10h-20.1v-191.1h80.6l65.2,54l-0.7,136.9H460  c-5.5,0-10,4.5-10,10s4.5,10,10,10h20.3c5.5,0,10-4.4,10-9.9l0.8-151.6C491,730.91,489.7,728.01,487.4,726.11z"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/></g> </svg>
+</span>
+                        <h3 class="text-black my-3 font-25 s-head pt-20">Road Transport</h3>
+                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
+                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                            lorem quis bibendum auctor.Aenean sollicitudin</p>
+                        <div class="icon-zoom">
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
+                                        <span>Learn More<svg version="1.1" id="Layer_1"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 36.1 25.8"
+                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" height="60px" viewBox="0 -101 713.75189 713"
+                                   width="60px" class="service-icon">
+
+    <path d="m85.085938 304.40625c-6.144532 2.882812-8.855469 10.140625-6.117188 16.34375l28.066406 60.25c1.378906 3 3.894532 5.335938 6.988282 6.488281 1.355468.492188 2.792968.746094 4.238281.746094 1.808593.015625 3.59375-.371094 5.238281-1.117187l212.054688-99.046876-19.207032 200.824219c-.371094 3.953125 1.152344 7.839844 4.109375 10.480469 9.296875 7.695312 20.882813 12.078125 32.9375 12.472656 3.324219-.003906 6.628907-.421875 9.851563-1.242187 17.214844-4.492188 30.5625-19.832031 39.667968-46.03125l83.449219-247.101563 165.273438-77.09375c48.648437-22.699218 73.71875-68.726562 56.882812-104.652344-9.554687-18.777343-27.855469-31.550781-48.773437-34.054687-23.242188-3.507813-46.996094.148437-68.105469 10.484375l-190.726563 89.433594-205.0625-80.207032c-25.824218-9.726562-46.277343-9.476562-60.621093.878907-12.035157 9.875-18.882813 24.71875-18.589844 40.285156.125 3.949219 2.113281 7.601563 5.363281 9.859375l138.082032 94.921875-79.078126 37.421875-132.601562-33.683594c-5.433594-1.335937-11.089844 1.113282-13.84375 5.988282l-33.050781 59.496093c-1.714844 3.152344-1.984375 6.894531-.738281 10.261719 1.238281 3.371094 3.871093 6.039062 7.226562 7.328125l98.167969 40.542969zm57.121093-248.09375c.734375-5.273438 3.402344-10.074219 7.488281-13.472656 7.113282-5.117188 20.085938-4.367188 37.421876 2.117187l182.617187 71.226563-83.328125 38.917968zm-112.257812 180.117188 21.703125-38.542969 127.605468 31.679687c2.75.695313 5.652344.433594 8.238282-.742187l414.75-193.71875c16.488281-8.132813 35.058594-11.09375 53.261718-8.484375 12.765626 1.175781 24.136719 8.542968 30.4375 19.707031 10.46875 22.457031-10.109374 55.261719-44.914062 71.476563l-143.695312 67.363281 8.734374-25.828125c2.207032-6.644532-1.398437-13.824219-8.042968-16.027344-6.652344-2.203125-13.828125 1.402344-16.03125 8.046875l-102.660156 305.476563c-6.113282 17.34375-13.722657 27.699218-22.203126 29.9375-5.253906 1.011718-10.691406-.019532-15.21875-2.863282l24.949219-261.953125c.652344-6.886719-4.398437-13-11.292969-13.652343-6.886718-.660157-13 4.398437-13.65625 11.285156l-3.863281 40.039062-214.054687 99.789063-17.578125-37.421875 35.167969-16.460938c4.527343-1.996094 7.445312-6.472656 7.445312-11.414062 0-4.945313-2.917969-9.421875-7.445312-11.414063zm0 0"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+</svg>
+                        </span>
+                        <h3 class="text-black my-3 font-25 s-head pt-20">Air Transport</h3>
+                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin gravida
+                            nibh vel velit auctor aliquet. Aenean sollicitudin,
+                            lorem quis bibendum auctor.Aenean sollicitudin</p>
+                        <div class="icon-zoom">
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
+                                        <span>Learn More<svg version="1.1" id="Layer_1"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 36.1 25.8"
+                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 512 512"
+                                 style="enable-background:new 0 0 512 512;" xml:space="preserve" width="60px"
+                                 height="60px" class="service-icon">
+	<g>
+		<path d="M491.729,112.971L259.261,0.745c-2.061-0.994-4.461-0.994-6.521,0L20.271,112.971c-2.592,1.251-4.239,3.876-4.239,6.754    v272.549c0,2.878,1.647,5.503,4.239,6.754l232.468,112.226c1.03,0.497,2.146,0.746,3.261,0.746s2.23-0.249,3.261-0.746    l232.468-112.226c2.592-1.251,4.239-3.876,4.239-6.754V119.726C495.968,116.846,494.32,114.223,491.729,112.971z M256,15.828    l215.217,103.897l-62.387,30.118c-0.395-0.301-0.812-0.579-1.27-0.8L193.805,45.853L256,15.828z M176.867,54.333l214.904,103.746    l-44.015,21.249L132.941,75.624L176.867,54.333z M396.799,172.307v78.546l-41.113,19.848v-78.546L396.799,172.307z     M480.968,387.568L263.5,492.55V236.658l51.873-25.042c3.73-1.801,5.294-6.284,3.493-10.015    c-1.801-3.729-6.284-5.295-10.015-3.493L256,223.623l-20.796-10.04c-3.731-1.803-8.214-0.237-10.015,3.493    c-1.801,3.73-0.237,8.214,3.493,10.015l19.818,9.567V492.55L31.032,387.566V131.674l165.6,79.945    c1.051,0.508,2.162,0.748,3.255,0.748c2.788,0,5.466-1.562,6.759-4.241c1.801-3.73,0.237-8.214-3.493-10.015l-162.37-78.386    l74.505-35.968L340.582,192.52c0.033,0.046,0.07,0.087,0.104,0.132v89.999c0,2.581,1.327,4.98,3.513,6.353    c1.214,0.762,2.599,1.147,3.988,1.147c1.112,0,2.227-0.247,3.26-0.746l56.113-27.089c2.592-1.251,4.239-3.875,4.239-6.754v-90.495    l69.169-33.392V387.568z"
+              data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+
+		<path d="M92.926,358.479L58.811,342.01c-3.732-1.803-8.214-0.237-10.015,3.493c-1.801,3.73-0.237,8.214,3.493,10.015    l34.115,16.469c1.051,0.508,2.162,0.748,3.255,0.748c2.788,0,5.466-1.562,6.759-4.241    C98.22,364.763,96.656,360.281,92.926,358.479z"
+              data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+
+		<path d="M124.323,338.042l-65.465-31.604c-3.731-1.801-8.214-0.237-10.015,3.494c-1.8,3.73-0.236,8.214,3.494,10.015    l65.465,31.604c1.051,0.507,2.162,0.748,3.255,0.748c2.788,0,5.466-1.562,6.759-4.241    C129.617,344.326,128.053,339.842,124.323,338.042z"
+              data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+</g>
+</svg>
+                        </span>
+                        <h3 class="text-black my-3 font-25 s-head pt-20">Packaging</h3>
+                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
+                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                            lorem quis bibendum auctor.Aenean sollicitudin</p>
+                        <div class="icon-zoom">
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
+                                        <span>Learn More<svg version="1.1" id="Layer_1"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 36.1 25.8"
+                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <span><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 444.702 444.702" style="enable-background:new 0 0 444.702 444.702;" xml:space="preserve" width="60px" height="60px" class="service-icon"><g><g>
+	<path d="M440.584,422.064l-17.648-39.943c-2.211-5.005-4.339-13.846-4.646-19.306l-1.405-24.876   c-0.339-5.999-0.616-127.558-0.616-127.558c0.003-8.706-5.506-16.136-15.768-16.475l-43.597-1.899   c-5.57-0.245-14.642,2.113-16.917,13.664l-7.925,50.38c-0.479,3.047-3.605,5.762-6.689,5.809l-34.466,0.528   c-8.158,0.125-14.965,5.502-15.496,12.239c-0.235,2.971,0.793,5.907,2.894,8.267c2.666,2.994,6.788,4.807,11.309,4.974l50.04,1.852   l-0.126,11.284l-22.076,57.663c-2.34,6.108-4.68,15.997-5.326,22.514l-4.665,47.037c-0.43,4.332,0.894,8.446,3.728,11.586   c2.834,3.14,6.792,4.877,11.145,4.892l1.968,0.007c0.001,0,0.001,0,0.002,0c8.509,0,16.208-6.877,17.163-15.332l4.367-38.684   c0.587-5.195,3.611-13.589,6.471-17.962l22.698-34.71l9.337,38.895c1.487,6.194,4.98,15.887,7.786,21.607l16.46,33.55   c3.043,6.203,9.913,10.372,17.096,10.372c1.408,0,2.794-0.167,4.117-0.495l1.188-0.295c4.235-1.051,7.705-3.777,9.52-7.479   S442.347,426.056,440.584,422.064z M324.299,439.7L324.299,439.7v0.002V439.7z"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+	<path d="M308.769,251.373L308.769,251.373c8.078,0,15.104-6.554,15.666-14.611l3.163-45.467c0.281-4.05-1.06-7.888-3.776-10.805   s-6.448-4.528-10.509-4.536l-62.505-0.109c-8.077,0-15.104,6.555-15.665,14.611l-3.164,45.467c-0.281,4.05,1.06,7.887,3.776,10.805   c2.717,2.918,6.449,4.529,10.51,4.536l62.479,0.109H308.769z M308.769,246.372L308.769,246.372L308.769,246.372L308.769,246.372z"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+	<path d="M327.16,130.494c1.979,5.402,7.782,9.962,13.498,10.606l9.21,1.039c-0.501,6.501,0.695,13.05,3.578,19.093   c4.342,9.102,11.969,15.967,21.474,19.331c4.071,1.442,8.31,2.173,12.597,2.173c0.002,0,0.001,0,0.003,0   c15.955,0,30.256-10.112,35.584-25.161c3.366-9.504,2.828-19.75-1.514-28.852c-4.342-9.101-11.968-15.967-21.474-19.333   c-4.072-1.44-8.31-2.171-12.595-2.171c-7.386,0-14.415,2.169-20.366,5.987l-33.133-3.152c-0.397-0.038-0.785-0.056-1.159-0.056   c-3.237,0-6.052,1.371-7.722,3.762c-1.713,2.452-2.022,5.696-0.849,8.901L327.16,130.494z"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+	<path d="M182.103,0H13.817c-6.065,0-11,4.935-11,11v281.284c0,6.065,4.935,11,11,11h168.286c6.065,0,11-4.935,11-11V11   C193.103,4.935,188.169,0,182.103,0z M61.337,201.327H26.671v-16.756h34.667V201.327z M162.228,138.239H33.693V32.032h128.535   V138.239z"
+          data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+</g></g> </svg></span>
+                        <h3 class="text-black my-3 font-25 s-head pt-20">Home Delivery</h3>
+                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin gravida
+                            nibh vel velit auctor aliquet. Aenean sollicitudin,
+                            lorem quis bibendum auctor.Aenean sollicitudin</p>
+                        <div class="icon-zoom">
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
+                                        <span>Learn More<svg version="1.1" id="Layer_1"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 36.1 25.8"
+                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <span>
+
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1"
+     class="service-icon" x="0px" y="0px" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;"
+     xml:space="preserve" width="60px" height="60px"><g><g>
+	<g>
+		<path d="M232,336h-48c-4.418,0-8,3.582-8,8v40c0,4.418,3.582,8,8,8h48c4.418,0,8-3.582,8-8v-40C240,339.582,236.418,336,232,336z     M224,376h-32v-24h32V376z"
+              data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+	</g>
+</g><g>
+	<g>
+		<rect x="384" y="344" width="16" height="16" data-original="#000000" class="st0" data-old_color="#000000"
+              fill="#0063DD"/>
+	</g>
+</g><g>
+	<g>
+		<rect x="416" y="344" width="32" height="16" data-original="#000000" class="st0" data-old_color="#000000"
+              fill="#0063DD"/>
+	</g>
+</g><g>
+	<g>
+		<rect x="384" y="376" width="64" height="16" data-original="#000000" class="st0" data-old_color="#000000"
+              fill="#0063DD"/>
+	</g>
+</g><g>
+	<g>
+		<path d="M479.944,127.712c-0.034-0.842-0.201-1.674-0.496-2.464c-0.072-0.176-0.112-0.36-0.192-0.528    c-0.08-0.168-0.048-0.2-0.096-0.296l-32-64c-1.355-2.712-4.128-4.425-7.16-4.424H184c-3.032-0.001-5.805,1.712-7.16,4.424l-32,64    c-0.048,0.096-0.056,0.2-0.104,0.296c-0.048,0.096-0.112,0.352-0.184,0.528c-0.295,0.79-0.462,1.622-0.496,2.464    c0,0.096-0.056,0.184-0.056,0.288v40H0v16h144v16H32v16h112v200c0,4.418,3.582,8,8,8h320c4.418,0,8-3.582,8-8V128    C480,127.896,479.944,127.816,479.944,127.712z M435.056,72l24,48h-108l-6-48H435.056z M295.064,72h33.872l6,48h-45.872    L295.064,72z M288,136h48v96h-48V136z M188.936,72h90l-6,48h-108L188.936,72z M464,408H160V216h48v-16h-48v-16h48v-16h-48v-32h112    v104c0,4.418,3.582,8,8,8h64c4.418,0,8-3.582,8-8V136h112V408z"
+              data-original="#000000" class="st0" data-old_color="#000000" fill="#0063DD"/>
+	</g>
+</g><g>
+	<g>
+		<rect y="304" width="128" height="16" data-original="#000000" class="st0" data-old_color="#000000"
+              fill="#0063DD"/>
+	</g>
+</g><g>
+	<g>
+		<rect x="32" y="336" width="96" height="16" data-original="#000000" class="st0" data-old_color="#000000"
+              fill="#0063DD"/>
+	</g>
+</g></g> </svg>
+
+                        </span>
+                        <h3 class="text-black my-3 font-25 s-head pt-20">Supply Chain</h3>
+                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
+                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
+                            lorem quis bibendum auctor.Aenean sollicitudin</p>
+                        <div class="icon-zoom">
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
+                                        <span>Learn More<svg version="1.1" id="Layer_1"
+                                                             xmlns="http://www.w3.org/2000/svg"
+                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 36.1 25.8"
+                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing-section pt-100 pb-50" data-aos="fade-up" id="pricing">
+        <div class="container">
+            <div class="mt-30 mb-20 pb-30 section-title" data-aos="fade-up">
+                <h1 class="text-boreder">04</h1>
+                <h2 class="text-theme sud-head">Our <span
+                        class="font-dark">Plan </span>.</h2>
+                <p class="text-grey sub-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla
+                    accumsan,</p>
+            </div>
+
+            <div class="pricing card-deck flex-column flex-md-row mb-3">
+                <div class="col-md-4">
+                    <div class="card card-pricing text-center bg-light-grey px-3 mb-4">
+                        <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom text-white shadow-sm head-1">STARTER</span>
+                        <div class="bg-transparent card-header pt-4 border-0">
+                            <h1 class="h1 font-weight-normal text-theme text-center mb-0" data-pricing-value="15">$<span
+                                    class="price">10.99</span></h1>
+                            <span class="h6 text-muted ml-2">/ per month</span>
+                        </div>
+                        <div class="card-body pt-10">
+                            <ul class="list-unstyled mb-4">
+                                <li>Up to 5 users</li>
+                                <li>Basic support on Github</li>
+                                <li>Monthly updates</li>
+                                <li>Free cancelation</li>
+                            </ul>
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10">
+                                <span>Pay Now<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                  viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8"
+                                                  xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                        fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                        points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-pricing  bg-theme text-center px-3 mb-4 price-center">
+                        <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom text-white shadow-sm head-1">PRO</span>
+                        <div class="bg-transparent card-header pt-4 border-0">
+                            <h1 class="h1 font-weight-normal text-black text-center mb-0" data-pricing-value="30">$<span
+                                    class="price">26.36</span></h1>
+                            <span class="h6 text-light-grey ml-2">/ per month</span>
+                        </div>
+                        <div class="card-body pt-10">
+                            <ul class="list-unstyled mb-4 text-white">
+                                <li>Up to 5 users</li>
+                                <li>Basic support on Github</li>
+                                <li>Monthly updates</li>
+                                <li>Free cancelation</li>
+                            </ul>
+                            <button class="btn1 btn-arrow  mt-20 mb-10 center-btn">
+                                <span>Pay Now<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                  viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8"
+                                                  xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                        fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                        points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-pricing text-center bg-light-grey  px-3 mb-4">
+                        <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom head-1 text-white shadow-sm">BUSINESS</span>
+                        <div class="bg-transparent card-header pt-4 border-0">
+                            <h1 class="h1 font-weight-normal text-theme text-center mb-0" data-pricing-value="45">$<span
+                                    class="price">99.99</span></h1>
+                            <span class="h6 text-muted ml-2">/ per month</span>
+                        </div>
+                        <div class="card-body pt-10">
+                            <ul class="list-unstyled mb-4">
+                                <li>Up to 5 users</li>
+                                <li>Basic support on Github</li>
+                                <li>Monthly updates</li>
+                                <li>Free cancelation</li>
+                            </ul>
+                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10">
+                                <span>Pay Now<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+                                                  xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                  viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8"
+                                                  xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
+                                        fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
+                                        points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!--                <div class="card card-pricing text-center px-3 mb-4">-->
+                <!--                    <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Enterprise</span>-->
+                <!--                    <div class="bg-transparent card-header pt-4 border-0">-->
+                <!--                        <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="60">$<span class="price">12</span><span class="h6 text-muted ml-2">/ per month</span></h1>-->
+                <!--                    </div>-->
+                <!--                    <div class="card-body pt-0">-->
+                <!--                        <ul class="list-unstyled mb-4">-->
+                <!--                            <li>Up to 5 users</li>-->
+                <!--                            <li>Basic support on Github</li>-->
+                <!--                            <li>Monthly updates</li>-->
+                <!--                            <li>Free cancelation</li>-->
+                <!--                        </ul>-->
+                <!--                        <button type="button" class="btn btn-outline-secondary mb-3">Order now</button>-->
+                <!--                    </div>-->
+                <!--                </div>-->
+            </div>
+        </div>
+    </section>
     <section class="blog-section bg-light-grey pt-100 pb-50" id="blog">
         <div class="container">
-            <div class="mt-30 mb-20 pb-30" data-aos="fade-up">
+            <div class="mt-30 mb-20 pb-30 section-title" data-aos="fade-up">
+                <h1 class="text-boreder">02</h1>
                 <p class="text-grey sub-head">OUR NEWS</p>
                 <h2 class="text-theme sud-head">We Provide Fast & Difference. <br/><span
                         class="font-dark">Safe Service </span>to Our Customer.</h2>
@@ -385,8 +826,7 @@
 
         </div>
     </section>
-
-    <section class="tract-section">
+    <section class="tract-section pb-50">
         <div class="container">
             <div class="col-md-12 row">
                 <div class="col-md-6 d-none d-sm-block" data-aos="zoom-in-right">
@@ -408,15 +848,17 @@
                                        required>
                                 <div class="help-block with-errors"></div>
                             </div>
-                            <button type="submit" id="form-submit1" aria-label='Thanks' class='h-button centered mt-50'
-                                    data-text='Send'>
-                                <span>T</span>
-                                <span>h</span>
-                                <span>a</span>
-                                <span>n</span>
-                                <span>k</span>
-                                <span>s</span>
-                            </button>
+                            <div class="form-group">
+                                <button type="submit" id="form-submit1" aria-label='Thanks' class='h-button centered '
+                                        data-text='Send'>
+                                    <span>T</span>
+                                    <span>h</span>
+                                    <span>a</span>
+                                    <span>n</span>
+                                    <span>k</span>
+                                    <span>s</span>
+                                </button>
+                            </div>
                         </form>
 
                     </div>
@@ -424,232 +866,14 @@
             </div>
         </div>
     </section>
-
-    <section class="service-section bg-light-grey pt-100 pb-50" id="services">
-        <div class="container">
-            <div class="mt-30 mb-20 pb-30" data-aos="fade-up">
-                <p class="text-grey sub-head">OUR SERVICES</p>
-                <h2 class="text-theme sud-head">We Provide Products <br/><span
-                        class="font-dark">All over </span>The World.</h2>
-            </div>
-
-            <div class="col-md-12 row" data-aos="zoom-in">
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <span><i class=" fa-icon fa fa-ship text-theme" aria-hidden="true"></i></span>
-                        <h3 class="text-white my-3 font-25 s-head pt-20">Sea Transport</h3>
-                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
-                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                            lorem quis bibendum auctor.Aenean sollicitudin</p>
-                        <div class="icon-zoom"> <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
-                                        <span>Learn More<svg version="1.1" id="Layer_1"
-                                                             xmlns="http://www.w3.org/2000/svg"
-                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                             viewBox="0 0 36.1 25.8"
-                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
-                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
-                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                        </button></div>
-                    </div>
-                </div>
-                <div class="col-md-4 ">
-                    <div class="service-card">
-                        <span><i class=" fa-icon fa fa-bus text-theme" aria-hidden="true"></i></span>
-                        <h3 class="text-white my-3 font-25 s-head pt-20">Road Transport</h3>
-                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
-                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                            lorem quis bibendum auctor.Aenean sollicitudin</p>
-                        <div class="icon-zoom">
-                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
-                                        <span>Learn More<svg version="1.1" id="Layer_1"
-                                                             xmlns="http://www.w3.org/2000/svg"
-                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                             viewBox="0 0 36.1 25.8"
-                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
-                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
-                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <span><i class=" fa-icon fa fa-fighter-jet text-theme" aria-hidden="true"></i></span>
-                        <h3 class="text-white my-3 font-25 s-head pt-20">Air Transport</h3>
-                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin gravida
-                            nibh vel velit auctor aliquet. Aenean sollicitudin,
-                            lorem quis bibendum auctor.Aenean sollicitudin</p>
-                        <div class="icon-zoom">
-                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
-                                        <span>Learn More<svg version="1.1" id="Layer_1"
-                                                             xmlns="http://www.w3.org/2000/svg"
-                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                             viewBox="0 0 36.1 25.8"
-                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
-                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
-                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <span><i class=" fa-icon fa fa-bus text-theme" aria-hidden="true"></i></span>
-                        <h3 class="text-white my-3 font-25 s-head pt-20">Road Transport</h3>
-                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
-                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                            lorem quis bibendum auctor.Aenean sollicitudin</p>
-                        <div class="icon-zoom">
-                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
-                                        <span>Learn More<svg version="1.1" id="Layer_1"
-                                                             xmlns="http://www.w3.org/2000/svg"
-                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                             viewBox="0 0 36.1 25.8"
-                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
-                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
-                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <span><i class=" fa-icon fa fa-fighter-jet text-theme" aria-hidden="true"></i></span>
-                        <h3 class="text-white my-3 font-25 s-head pt-20">Air Transport</h3>
-                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin gravida
-                            nibh vel velit auctor aliquet. Aenean sollicitudin,
-                            lorem quis bibendum auctor.Aenean sollicitudin</p>
-                        <div class="icon-zoom">
-                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
-                                        <span>Learn More<svg version="1.1" id="Layer_1"
-                                                             xmlns="http://www.w3.org/2000/svg"
-                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                             viewBox="0 0 36.1 25.8"
-                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
-                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
-                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="service-card">
-                        <span><i class=" fa-icon fa fa-ship text-theme" aria-hidden="true"></i></span>
-                        <h3 class="text-white my-3 font-25 s-head pt-20">Sea Transport</h3>
-                        <p class="text-black font-13 pt-15">This is Photoshop's version of Lorem Ipsum. Proin
-                            gravida nibh vel velit auctor aliquet. Aenean sollicitudin,
-                            lorem quis bibendum auctor.Aenean sollicitudin</p>
-                        <div class="icon-zoom"> <button class="btn1 btn-arrow btn-border1 mt-20 mb-10 sbtn">
-                                        <span>Learn More<svg version="1.1" id="Layer_1"
-                                                             xmlns="http://www.w3.org/2000/svg"
-                                                             xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                                                             viewBox="0 0 36.1 25.8"
-                                                             enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline
-                                                fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10"
-                                                points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                        </button></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="pricing-section pt-100 pb-50" data-aos="fade-up" id="pricing">
-        <div class="container">
-            <div class="mt-30 mb-20 pb-30" data-aos="fade-up">
-
-                <h2 class="text-theme sud-head">Our <span
-                        class="font-dark">Plan </span>.</h2>
-                <p class="text-grey sub-head">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla accumsan,</p>
-            </div>
-
-            <div class="pricing card-deck flex-column flex-md-row mb-3">
-                <div class="col-md-4">
-                    <div class="card card-pricing text-center bg-light-grey px-3 mb-4">
-                        <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom text-white shadow-sm head-1">STARTER</span>
-                        <div class="bg-transparent card-header pt-4 border-0">
-                            <h1 class="h1 font-weight-normal text-theme text-center mb-0" data-pricing-value="15">$<span class="price">10.99</span></h1>
-                            <span class="h6 text-muted ml-2">/ per month</span>
-                        </div>
-                        <div class="card-body pt-10">
-                            <ul class="list-unstyled mb-4">
-                                <li>Up to 5 users</li>
-                                <li>Basic support on Github</li>
-                                <li>Monthly updates</li>
-                                <li>Free cancelation</li>
-                            </ul>
-                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10">
-                                <span>Pay Now<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button>
-
-                        </div>
-                    </div></div>
-                <div class="col-md-4">
-                    <div class="card card-pricing  bg-theme text-center px-3 mb-4 price-center">
-                        <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom text-white shadow-sm head-1">PROFESSIONAL</span>
-                        <div class="bg-transparent card-header pt-4 border-0">
-                            <h1 class="h1 font-weight-normal text-black text-center mb-0" data-pricing-value="30">$<span class="price">26.36</span></h1>
-                            <span class="h6 text-light-grey ml-2">/ per month</span>
-                        </div>
-                        <div class="card-body pt-10">
-                            <ul class="list-unstyled mb-4 text-white">
-                                <li>Up to 5 users</li>
-                                <li>Basic support on Github</li>
-                                <li>Monthly updates</li>
-                                <li>Free cancelation</li>
-                            </ul>
-                            <button class="btn1 btn-arrow  mt-20 mb-10 center-btn">
-                                <span>Pay Now<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card card-pricing text-center bg-light-grey  px-3 mb-4">
-                        <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom head-1 text-white shadow-sm">BUSINESS</span>
-                        <div class="bg-transparent card-header pt-4 border-0">
-                            <h1 class="h1 font-weight-normal text-theme text-center mb-0" data-pricing-value="45">$<span class="price">99.99</span></h1>
-                            <span class="h6 text-muted ml-2">/ per month</span>
-                        </div>
-                        <div class="card-body pt-10">
-                            <ul class="list-unstyled mb-4">
-                                <li>Up to 5 users</li>
-                                <li>Basic support on Github</li>
-                                <li>Monthly updates</li>
-                                <li>Free cancelation</li>
-                            </ul>
-                            <button class="btn1 btn-arrow btn-border1 mt-20 mb-10">
-                                <span>Pay Now<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 36.1 25.8" enable-background="new 0 0 36.1 25.8" xml:space="preserve"><g><line fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" x1="0" y1="12.9" x2="34" y2="12.9"></line><polyline fill="none" stroke="#FFFFFF" stroke-width="3" stroke-miterlimit="10" points="22.2,1.1 34,12.9 22.2,24.7   "></polyline></g></svg></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                <!--                <div class="card card-pricing text-center px-3 mb-4">-->
-                <!--                    <span class="h6 w-60 mx-auto px-4 py-1 rounded-bottom bg-primary text-white shadow-sm">Enterprise</span>-->
-                <!--                    <div class="bg-transparent card-header pt-4 border-0">-->
-                <!--                        <h1 class="h1 font-weight-normal text-primary text-center mb-0" data-pricing-value="60">$<span class="price">12</span><span class="h6 text-muted ml-2">/ per month</span></h1>-->
-                <!--                    </div>-->
-                <!--                    <div class="card-body pt-0">-->
-                <!--                        <ul class="list-unstyled mb-4">-->
-                <!--                            <li>Up to 5 users</li>-->
-                <!--                            <li>Basic support on Github</li>-->
-                <!--                            <li>Monthly updates</li>-->
-                <!--                            <li>Free cancelation</li>-->
-                <!--                        </ul>-->
-                <!--                        <button type="button" class="btn btn-outline-secondary mb-3">Order now</button>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-            </div>
-        </div>
-    </section>
-
     <section class="contact-section pt-100 pb-50 bg-dark" id="contact">
         <div class="container">
             <div class="col-md-12 row  pt-50">
                 <div class="col-md-6" data-aos="fade-right">
                     <div class="contact-text">
                         <h3 class="pt-15 pb-30 text-theme font-35">Request A Quote</h3>
-                        <p class="text-light-grey pb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla chronocrator accumsan, metus ultrices eleifend gravi.</p>
+                        <p class="text-light-grey pb-30">Lorem ipsum dolor sit amet, consectetur adipiscing elit Nulla
+                            chronocrator accumsan, metus ultrices eleifend gravi.</p>
                         <p class="pt-15 text-light-grey ">Mon - Sat : 8.00 AM to 7.00 PM</p>
                         <p class="pt-15 text-light-grey ">295 Witting Streets Suite 666, Melbourne, Australia</p>
                         <p class="pt-15 text-light-grey ">+ 123 5456 789 01 <br>+ 123 5456 789 01</p>
@@ -700,12 +924,12 @@
         </div>
 
     </section>
-
     <section class="testimonial-section bg-light-grey pt-100 pb-50" id="client">
         <div class="container">
-            <div class="mt-30 mb-20 pb-30" data-aos="fade-up">
+            <div class="mt-30 mb-20 pb-30 section-title" data-aos="fade-up">
+                <h1 class="text-boreder">05</h1>
                 <p class="text-grey sub-head">TESTIMONIAL</p>
-                <h2 class="text-theme sud-head">Clients<span  class="font-dark">Feedback </span>.</h2>
+                <h2 class="text-theme sud-head">Clients<span class="font-dark">Feedback </span>.</h2>
             </div>
         </div>
         <div class="container">
@@ -714,84 +938,105 @@
                     <div class="item">
                         <div class="col-md-12 ">
                             <div class="client-box row">
-                                <div class="col-md-6"> <span><img src="./images/user-avatar-big-02.jpg" class="avatar"></span></div>
+                                <div class="col-md-6"><span><img src="./images/user-avatar-big-02.jpg"
+                                                                 class="avatar"></span></div>
                                 <div class="col-md-6">
                                     <p class="c-name">Albert Joseph</p>
                                     <p class="c-postiton">London, UK</p>
                                 </div>
-                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula porta nibh.</p>
+                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat
+                                    ligula porta nibh.</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-md-12 ">
                             <div class="client-box row">
-                                <div class="col-md-6"> <span><img src="./images/user-avatar-big-02.jpg" class="avatar"></span></div>
+                                <div class="col-md-6"><span><img src="./images/user-avatar-big-02.jpg"
+                                                                 class="avatar"></span></div>
                                 <div class="col-md-6">
                                     <p class="c-name">Albert Joseph</p>
                                     <p class="c-postiton">London, UK</p>
                                 </div>
-                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula porta nibh.</p>
+                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat
+                                    ligula porta nibh.</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-md-12 ">
                             <div class="client-box row">
-                                <div class="col-md-6"> <span><img src="./images/user-avatar-big-02.jpg" class="avatar"></span></div>
+                                <div class="col-md-6"><span><img src="./images/user-avatar-big-02.jpg"
+                                                                 class="avatar"></span></div>
                                 <div class="col-md-6">
                                     <p class="c-name">Albert Joseph</p>
                                     <p class="c-postiton">London, UK</p>
                                 </div>
-                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula porta nibh.</p>
+                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat
+                                    ligula porta nibh.</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-md-12 ">
                             <div class="client-box row">
-                                <div class="col-md-6"> <span><img src="./images/user-avatar-big-02.jpg" class="avatar"></span></div>
+                                <div class="col-md-6"><span><img src="./images/user-avatar-big-02.jpg"
+                                                                 class="avatar"></span></div>
                                 <div class="col-md-6">
                                     <p class="c-name">Albert Joseph</p>
                                     <p class="c-postiton">London, UK</p>
                                 </div>
-                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula porta nibh.</p>
+                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat
+                                    ligula porta nibh.</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-md-12 ">
                             <div class="client-box row">
-                                <div class="col-md-6"> <span><img src="./images/user-avatar-big-02.jpg" class="avatar"></span></div>
+                                <div class="col-md-6"><span><img src="./images/user-avatar-big-02.jpg"
+                                                                 class="avatar"></span></div>
                                 <div class="col-md-6">
                                     <p class="c-name">Albert Joseph</p>
                                     <p class="c-postiton">London, UK</p>
                                 </div>
-                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula porta nibh.</p>
+                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat
+                                    ligula porta nibh.</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-md-12 ">
                             <div class="client-box row">
-                                <div class="col-md-6"> <span><img src="./images/user-avatar-big-02.jpg" class="avatar"></span></div>
+                                <div class="col-md-6"><span><img src="./images/user-avatar-big-02.jpg"
+                                                                 class="avatar"></span></div>
                                 <div class="col-md-6">
                                     <p class="c-name">Albert Joseph</p>
                                     <p class="c-postiton">London, UK</p>
                                 </div>
-                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula porta nibh.</p>
+                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat
+                                    ligula porta nibh.</p>
                             </div>
                         </div>
                     </div>
                     <div class="item">
                         <div class="col-md-12 ">
                             <div class="client-box row">
-                                <div class="col-md-6"> <span><img src="./images/user-avatar-big-02.jpg" class="avatar"></span></div>
+                                <div class="col-md-6"><span><img src="./images/user-avatar-big-02.jpg"
+                                                                 class="avatar"></span></div>
                                 <div class="col-md-6">
                                     <p class="c-name">Albert Joseph</p>
                                     <p class="c-postiton">London, UK</p>
                                 </div>
-                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat ligula porta nibh.</p>
+                                <p class="text-black font-13 pt-15">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Vivamus in velit dolor. Vivamus gravida, neque nec interdum cursus, erat
+                                    ligula porta nibh.</p>
                             </div>
                         </div>
                     </div>
@@ -800,25 +1045,25 @@
 
         </div>
     </section>
-
     <section class="get-start-section  pt-100 pb-50" data-aos="zoom-in">
         <div class="container">
-            <div class="col-lg-12 row bg-theme service-box box-v2" >
-                <div class="col-md-9 mt-60" data-aos="zoom-in-down">
+            <div class="col-lg-12 row bg-theme service-box box-v2">
+                <div class="col-md-9 mt-60 mb-50" data-aos="zoom-in-down">
                     <p class="text-light-grey sub-head">Let's Start</p>
                     <h3 class="text-white">Let's Make Something Great Together.</h3>
                 </div>
-                <div class="col-md-3 mt-80" data-aos="zoom-in-down">
+                <div class="col-md-3 mt-80 text-center" data-aos="zoom-in-down">
                     <a href="#" class="btn btn-theme v2">Let's Go !</a>
                 </div>
 
             </div>
 
-        </div></section>
+        </div>
+    </section>
     <footer class="footer">
         <div class="container">
             <div class="footer-text text-center ">
-                <span class="text-muted " >© 2020 Xspace. Made With Love By <a href="https://fulgid.in">Fulgid</a></span>
+                <span class="text-muted ">© 2020 Xspace. Made With Love By <a href="https://fulgid.in">Fulgid</a></span>
                 <div class="social-link">
                     <ul>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
@@ -832,19 +1077,20 @@
 
         </div>
     </footer>
-
 </div>
+
+
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"   crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 <script src="./js/custom.js" type="text/javascript"></script>
 <script>
     AOS.init();
 </script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.0/jquery.min.js"></script>
 <script type="text/javascript" src="./js/validator.min.js"></script>
 <script type="text/javascript" src="./js/form-scripts.js"></script>
