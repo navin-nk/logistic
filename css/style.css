@@ -957,7 +957,7 @@ About Section
 .sud-head {
     font-weight: 700;
     font-family: CerebriSans, sans-serif;
-    font-size: 35px;
+    font-size: 35px !important;
 }
 
 .about-section h2 span {
@@ -1201,7 +1201,7 @@ Track Section
 }
 
 .card-track {
-    height: 450px;
+    /* height: 450px; */
     width: 100%;
     background: #0063DD !important;
     box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.1607843137254902);
@@ -1222,7 +1222,7 @@ Track Section
 
 .card-track form input {
     height: 50px;
-    margin-bottom: 60px;
+    margin-bottom: 10px;
     border: none !important;
 }
 
@@ -1537,7 +1537,7 @@ svg .st0 {
 .service-card:hover .st0 {
     fill: #0063DD !important;
     stroke-width: 10px;
-    animation: icon 2s linear forwards !important;
+    animation: icon 3s linear forwards !important;
 
 }
 
@@ -1636,4 +1636,142 @@ svg .st0 {
 #button.show {
     opacity: 1;
     visibility: visible;
+}
+
+
+footer .site-link{
+    color:#fff;
+
+}
+
+footer .site-link:hover{
+    color:#0063dd;
+}
+
+@media (min-width:320px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+.card-track form h2{
+    font-size: 25px ;
+}
+.sud-head{
+    font-size:25px !important;
+}
+.brief ul li{
+    padding:1px;
+}
+
+html, body{
+    overflow-x: hidden;
+}
+
+.let-button{
+    
+    margin-top: 0px !important;
+
+}
+#msgSubmit{
+    font-size: 15px;
+}
+
+.heading1{
+    font-size:40px;
+}
+
+.btn1{
+    padding:5px;
+}
+.price {
+    font-weight: 700 !important;
+    font-size: 27px !important;
+}
+.service-card .font-25 {
+    font-size: 20px !important;
+}
+}
+@media (min-width:1025px) {
+    .btn1{
+        padding: 1.4rem 2.1rem;
+    }
+    .let-button{
+    
+        margin-top: 80px !important;
+    
+    } 
+    #msgSubmit{
+        font-size: 20px;
+    }
+    
+    .heading1{
+        font-size:60px;
+    }
+    .sud-head{
+        font-size: 35px !important;
+    }
+    .price {
+        font-weight: 700 !important;
+        font-size: 55px !important;
+    }
+}
+@media (min-width:1281px) {
+    .let-button{
+    
+        margin-top: 80px !important;
+    
+    } 
+    .sud-head{
+        font-size :35px !important;
+    }
+    #msgSubmit{
+        font-size: 20px;
+    }
+    
+    .heading1{
+        font-size:60px;
+    }
+    .btn1{
+        padding: 1.4rem 2.1rem;
+    }
+    .price {
+        font-weight: 700 !important;
+        font-size: 55px !important;
+    }
+}
+
+
+@media only screen 
+  and (min-width: 1024px) 
+  and (max-height: 1366px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .let-button {
+        margin-top: 80px !important;
+    }
+    .box-v2 h3 {
+        font-size: 30px !important;
+        font-family: Poppins, sans-serif;
+    }
+    .v2 {
+       
+        padding: 10px 50px;
+    }
+}
+
+
+@media only screen 
+  and (min-width: 768px) 
+  and (max-height: 1024px) 
+  and (orientation: portrait) 
+  and (-webkit-min-device-pixel-ratio: 1.5) {
+    .let-button {
+        margin-top: 80px !important;
+    }
+}
+
+
+footer .social-link ul li a i{
+    transition: all 0.3s ease-in;
+}
+
+footer .social-link ul li:hover a i{
+    transform: scale(1.4);
 }
